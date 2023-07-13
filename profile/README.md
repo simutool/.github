@@ -1,5 +1,4 @@
-This is the entry repository to the SIMUTOOL Knowledge Management Suite (KMS) of software published under the [simutool github organization](https://github.com/simutool). This project was developed for the Horizon 2020 EU project [SIMUTOOL (2015-2019)](https://cordis.europa.eu/project/rcn/198371). It was developed at the [University of Bamberg](https://www.uni-bamberg.de) in the [MOBI](https://www.uni-bamberg.de/en/mobi/) chair.
-
+This repository contains the source code of the data management *software suite* developed for the Horizon 2020 EU project [SIMUTOOL](https://cordis.europa.eu/project/rcn/198371) (2015-2019). It was developed at the [University of Bamberg](https://www.uni-bamberg.de) in the [MOBI](https://www.uni-bamberg.de/en/mobi/) chair.
 
 ## The Architecture
 
