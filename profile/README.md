@@ -2,9 +2,12 @@ This repository contains the source code of the data management *software suite*
 
 ## The Architecture
 
-![Conmponents](components.png)
+![Conmponents](https://raw.githubusercontent.com/simutool/.github/main/profile/components.png)
+
+
+*Components:*
 
 * KGService: Knowledge Graph that acts as a data catalog on top of a file system to store heterogenous data assets ([https://github.com/simutool/kgservice](https://github.com/simutool/kgservice))
-* 
-
+* Online Monitoring: End-user application to assist users to add and upload data assets and there metadata to the KGService ([https://github.com/simutool/om-tool](https://github.com/simutool/om-tool)).
+  
 
