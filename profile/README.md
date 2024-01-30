@@ -1,6 +1,6 @@
 This repository contains the source code of the data management software suite developed for the Horizon 2020 EU project [SIMUTOOL](https://cordis.europa.eu/project/rcn/198371)  between the years of 2015 and 2019. It was developed at the [University of Bamberg](https://www.uni-bamberg.de) in the [MOBI](https://www.uni-bamberg.de/en/mobi/) chair.
 
-![](simutool_system_design.drawio.svg)
+![](profile/simutool_system_design.drawio.svg)
 
 **Components**:
 
