@@ -16,7 +16,7 @@ The figure above presents the deployed SaaS architecture during the lifetime the
 * Native OS Client ([simutool/aku-client](https://github.com/simutool/aku-client)): End-user application to assist users to add and upload data assets and thier metadata to the Data Lake Server.
 
 
-## Architecture Scaled for Read-Heavy Application
+## Architecture Scalability (Read-Heavy)
 
 
 ![](simutool_system_design_scaled.drawio.svg)
