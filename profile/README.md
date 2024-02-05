@@ -39,7 +39,7 @@ Due to the analysis above, there are several dimensions of scaling:
 
 1. *Scale the Data Lake Server horizontally*:  Because the Data Lake Server was built stateless, that meant that it can be scaled horizontally without major modification. We already used Docker multi-container environments, so spinning up new instances was not a problem. In addition, one or more load balancers would be needed in front of the spun nodes.
 
-2. *Support the Blob Store with a CDN*: Because data download (reads) typically spiked right after new data was added (this is because users could subscribe to newly added data and hence be informed as soon as such data is upload). *Horizontally partitioning* (i.e., sharding) the Blob Store is not a good idea because the spikes are typically around related data, which will end up on the same shard, so will not distribute the load. Adding a CDN (content delivery network) between the Blob Store and the clients is the better option to implement.
+2. *Support the Blob Store with a CDN*: Because data download (reads) typically spiked right after new data was added (this is because the system allowed users to subscribe to newly added data). Horizontally partitioning (i.e., sharding) the Blob Store is not a good idea because the spikes are typically around the same data, which will end up on the same shard. Adding a CDN (content delivery network) between the Blob Store and the clients is the better option here.
 
 3. *Implement a Master-Slave (Write-Read) architecture on the Catalog DB*: Due to the read-heavy nature of the Catalog DB, the most straightforward and satisfactory solution is to implement a master-slave replication (write to master; read from the slave). Two slaves would be a good start, and more can be spun as needed.
 
