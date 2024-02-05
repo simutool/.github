@@ -19,4 +19,4 @@ The figure above presents the deployed SaaS architecture during the lifetime the
 ## Architecture Scaled for Read-Heavy Application
 
 
-![](simutool_system_design.drawio_scaled.svg)
+![](simutool_system_design_scaled.drawio.svg)
