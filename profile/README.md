@@ -4,14 +4,16 @@ This repository contains the source code for a data lake / data management SaaS 
 
 The project involved a consortium of 8 organizations working cooperatively to further the know-how of microwave-assisted manufacturing (as opposed to classical manufacturing in heat ovens). The work was characterized by data-driven and close collaboration with requirements of quick turnaround time. 
 
-We developed a software suite as a model for supporting the close collaboration and data sharing in industrial manufacturing projects. You can read more about the project [here](https://www.uni-bamberg.de/en/mobi/research/simutool/).
+We developed a software suite as a model for supporting the close collaboration and data sharing in industrial manufacturing projects. In this repository (and github organization) we present the technical architecture as well as point to the source code of some of the components of the project. 
+
+A more general (not software-related) description of the project can be found [here](https://www.uni-bamberg.de/en/mobi/research/simutool/).
 
 ## Architecture
 
 ![](simutool_system_design.drawio.svg)
 
 
-The figure above presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed to be scalable, however we did not need to scale to further during its lifetime. However, several nodes have been designed as *stateless/scalable nodes* that can be scaled whenever needed. See the next section figure below for how the deployment could 
+The figure above presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed to be scalable, however we did not need to scale it further than that during its lifetime. However, key nodes have been designed as *stateless/scalable* that can be scaled when needed. The section [Scaling the Architecture](Scaling_the_Architecture) present one possible scenario to scale the system design. Below we briefly discuss some of the elements of the system.
 
 **Components**:
 
