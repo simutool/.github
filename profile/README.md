@@ -10,7 +10,7 @@ A more general (not software-related) description of the project can be found [h
 
 ## Architecture
 
-![](simutool_system_design.drawio.svg)
+![](profile/simutool_system_design.drawio.svg)
 
 
 The figure above presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed to be scalable, however we did not need to scale it further than that during its lifetime. However, key nodes have been designed as *stateless/scalable* that can be scaled when needed. The section [Scaling the Architecture](Scaling_the_Architecture) present one possible scenario to scale the system design. Below we briefly discuss some of the elements of the system.
@@ -26,4 +26,4 @@ The figure above presents the deployed SaaS architecture during the lifetime the
 
 
 
-![](simutool_system_design_scaled.drawio.svg)
+![](profile/simutool_system_design_scaled.drawio.svg)
