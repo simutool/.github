@@ -1,6 +1,10 @@
-# SIMUTOOL Data Lake SaaS (Source Code)
+# SIMUTOOL Data Lake SaaS (Architecture / Source Code)
 
-This repository contains the source code for a data lake / data management SaaS platform developed for an EU Horizon 2020 manufacturing project between the years of 2015 and 2019. The project involved a consortium of 8 organizations working cooperatively to further the know-how of microwave-assisted manufacturing (as opposed to classical manufacturing in heat ovens). The work was characterized by data-driven and close collaboration with requirements of quick turnaround time. We developed a software suite as a model for supporting the close collaboration and data sharing in industrial manufacturing projects. You can read more about the project [here](https://www.uni-bamberg.de/en/mobi/research/simutool/).
+This repository contains the source code for a data lake / data management SaaS platform developed for an EU Horizon 2020 manufacturing project between the years of 2015 and 2019. 
+
+The project involved a consortium of 8 organizations working cooperatively to further the know-how of microwave-assisted manufacturing (as opposed to classical manufacturing in heat ovens). The work was characterized by data-driven and close collaboration with requirements of quick turnaround time. 
+
+We developed a software suite as a model for supporting the close collaboration and data sharing in industrial manufacturing projects. You can read more about the project [here](https://www.uni-bamberg.de/en/mobi/research/simutool/).
 
 ## Architecture
 
