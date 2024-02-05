@@ -28,7 +28,7 @@ Below are the key elements of the system:
 System scaling varies greatly based on the context. It is at least a function of the properties and the usage patterns of the system, as well the availability rate desired and the resources available. During our experience with the system above, we had the following properties:
 
 
-- *Read-Heavy*: The system is read-heavy, particularly the **Catalog DB** (which contains the metadata of the data lake contents) and to a lesser degree on the **Blob Store Server** (which stores heterogenous file types in their original format). However, there are *two key differences* in the nature of *reading* between them:
+- *Read-Heavy*: The system is read-heavy, particularly the **Catalog DB** (which contains the metadata of the data lake contents) and to a lesser degree the **Blob Store Server** (which stores heterogenous file types in their original format). However, there are *two key differences* in the nature of *reading* between them:
   - The **Catalog DB** has a large read traffic rate (almost every client operation results in multiple reads), but the size of the read data is small and constant.
   - The **Blob Store Server** had an opposite read nature: characterized by many traffic spikes and large and heterogenous data sizes.
 - *Data Lake Server: Heavy Load and single point-of-failure*: although we didn't face any performance problems at the time but it was clear that the first scalability action was planned on the Data Lake Server.
