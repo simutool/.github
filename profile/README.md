@@ -4,6 +4,18 @@ This article discusses the system design and motivation of a data lake / data ma
 
 The project involved 8 companies with different specializations, terminologies, properietary systems, and scopes of data confidentiality, privacy, and legality. The nature of the work and the structure of the project led to dense networks of closely coupled data-driven interdependencies including activities such as simulation, sensor measurements, process control, material development, tooling, and prototyping. Our role was to devise a software solution to support this project. 
 
+__Software Solution Team__:
+
+- Professor / Supervisor: Prof. Daniela Nicklas
+- Project Lead / Architect / Developer / Research Associate: Nasr Kasrin
+- Research Associates: Maliha Qureshi, Simon Steuer
+- Developers / Student Assistants: Adrian Lengenfelder, Valentina Veloso, Lukas Genssler, Katharina Broswik, Harshit Gupta
+
+In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built.
+
+
+## Achievements
+
 We devised and built an end-to-end eco-system of tools centered around a data lake to streamline the sharing and exchanging of data assets across systems, participants, and groups.
 
 We achieved three main objectives:
@@ -14,14 +26,12 @@ We achieved three main objectives:
 4. Increased data asset re-use by 200% due to developing a controlled vocabulary and semantic technologies to describe data assets to increase their lifetime beyond that of their uploader.
 
 
-In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built.
-
 
 
 ## The Problem
 
 
-The figure above depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. 
+The following figure depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. 
 
 
 ![](profile/simutool-asynch-data-exchange.png)
@@ -57,7 +67,7 @@ Below are the key elements of the system (with links to source code repo):
 
 ## External Ecosystem 
 
-The figure above shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project. 
+The following figure shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project. 
 
 ![](profile/simutool-systems-interaction.png)
 
