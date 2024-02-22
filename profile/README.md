@@ -7,6 +7,7 @@ Hint: _Looking for the discussion on system design?_ Skip directly to [Scaling t
 The project brought together 8 companies each with unique specializations, proprietary systems, and varying levels of concern regarding data confidentiality, privacy, and legal compliance. Within this collaborative framework, there existed intricate networks of interdependent data streams including simulation data, sensor data, and process control data. The objective of the software solution team was to devise a robust platform capable of supporting and enhancing the performance of such projects with intensive data sharing and exchange requirements.
 
 Project page at the University of Bamberg: [uni-bamberg.de/en/mobi/research/simutool](https://www.uni-bamberg.de/en/mobi/research/simutool/)
+
 Project page at the European Commission: [cordis.europa.eu/project/id/680569](https://cordis.europa.eu/project/id/680569)
 
 ### Software Solutions Team
