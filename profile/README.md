@@ -9,7 +9,7 @@ Based on the insights developed based on our involvement in this domain and its 
 
 ## The Problem
 
-![](profile/simuttol-asynch-data-exchange.png)
+![](profile/simutool-asynch-data-exchange.png)
 
 
 The figure above depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. The project involved partners from eight geographically distributed locations with different areas of specialization and scopes of confidentiality, privacy, and legality, which did not know each other beforehand. It required the organization of various couplings of data-driven cooperations with dense networks of inter-dependencies to increase the turnover time of R&D activities and accumulate reusable data resources. 
