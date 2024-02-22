@@ -20,7 +20,7 @@ This document is the entry-point into the SIMUTOOL github organization which con
 
 ## Achievements Overview
 
-We successfully conceptualized and constructed a comprehensive ecosystem of tools, centralized around a dynamic data lake, aimed at optimizing the seamless sharing and exchange of data assets among diverse systems, participants, and groups. Our efforts yielded three key accomplishments:
+Our efforts yielded four key accomplishments:
 
 1. **Accelerated R&D Processes**: By providing an integrated solution for sharing and exchanging data assets across participants and groups, we achieved a notable 30% reduction in the turnaround time of the R&D process.
 
@@ -45,6 +45,8 @@ The crux of the challenge lay not in the diversity of data assets but in the int
 
 
 ## Architecture
+
+Based on the analysis of the domain, we successfully conceptualized and constructed a comprehensive ecosystem of tools, centralized around a dynamic data lake, aimed at optimizing the seamless sharing and exchange of data assets among heterogenous systems/interfaces, participants, and groups.
 
 The figure below showcases the deployed SaaS architecture utilized throughout the system's operational lifespan. From its inception, the system was designed with future scalability in mind, poised to accommodate increased traffic volumes and the need for enhanced performance and availability. For a detailed exploration of potential scaling scenarios for this system, refer to the section [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture) below.
 
