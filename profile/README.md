@@ -2,14 +2,14 @@
 
 This article discusses the system design and motivation of a data lake / data management SaaS platform that was built for an EU _Horizon 2020_ project in the domain of computer-aided manufacturing in the aerospace and automotive industries ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019). The goal of the project was to _increase the Technology Readiness Level (TRL) of the micorwave heating of composites (tooling and process optimization) to 6-7_. 
 
-Hint: __If you are looking for the discussion on system design__, you can skip directly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
+Hint: _Looking for the discussion on system design?_ Skip directly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
 
 The project included 8 companies with different specializations, properietary systems, and scopes of data confidentiality, privacy, and legality. 
 It involved complex networks of closely coupled data-driven dependencies for data such as simulation data, sensor data, process control data. The role of the software solution team was to devise a solution to support and boost the perfomance of such projects with dense data sharing and exchange requirements.
 
-__Software Solutions Team (University of Bamberg)__:
+__Software Solutions Team__
 
-- Professor / Supervisor: Prof. Daniela Nicklas
+- Professor / Supervisor: Prof. Daniela Nicklas (University of Bamberg)
 - Project Lead / Architect / Developer / Research Associate: Nasr Kasrin
 - Research Associates: Maliha Qureshi, Simon Steuer
 - Developers: Adrian Lengenfelder, Valentina Veloso, Lukas Genssler, Katharina Broswik, Harshit Gupta
@@ -96,12 +96,12 @@ The following figure shows how different systems, activites, and user personas, 
 ## Scaling the Architecture
 
 
-System scaling is a function of (1) the usage patterns of the system , (2) the desired performance and availability, (2) as well as the resources available to the project. Given our context (described below), we projected the following scalability scenario of the project as shown in the figure below.  
+System scaling is a function of (1) the usage patterns of the system , (2) the desired performance and availability, (2) as well as the resources available to the project. The architeture depicted in the following figure meets the requirements of our domain (rationale below).
 
 ![](profile/simutool_system_design_scaled.drawio.svg)
 
 
-The rationale was as follows:
+### Design Rationale
 
 
 1. *Read-Heavy*: The system is read-heavy, particularly the **Catalog DB** (which contains the metadata of the data lake contents) and to a lesser degree the **Blob Store Server** (which stores heterogenous file types in their original format). However, there are *two key differences*:
