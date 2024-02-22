@@ -4,14 +4,16 @@ This article discusses the system design and motivation of a data lake / data ma
 
 The project involved 8 companies with different specializations, terminologies, properietary systems, and scopes of data confidentiality, privacy, and legality. The nature of the work and the structure of the project led to dense networks of closely coupled data-driven interdependencies including activities such as simulation, sensor measurements, process control, material development, tooling, and prototyping. Our role was to devise a software solution to support this project. 
 
-__Software Solution Team__:
+__Software Solution Teams (University of Bamberg)__:
 
 - Professor / Supervisor: Prof. Daniela Nicklas
 - Project Lead / Architect / Developer / Research Associate: Nasr Kasrin
 - Research Associates: Maliha Qureshi, Simon Steuer
-- Developers / Student Assistants: Adrian Lengenfelder, Valentina Veloso, Lukas Genssler, Katharina Broswik, Harshit Gupta
+- Developers: Adrian Lengenfelder, Valentina Veloso, Lukas Genssler, Katharina Broswik, Harshit Gupta
 
-In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built.
+In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built. 
+
+__If you are looking for the discussion on system design__, you can skip firectly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
 
 
 ## Achievements
