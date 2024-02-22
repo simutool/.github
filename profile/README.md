@@ -1,6 +1,6 @@
 # SIMUTOOL Data Lake
 
-This article discusses the system design and motivation of a data lake / data management SaaS platform that was built for an EU _Horizon 2020_ project in the domain of computer-aided manufacturing in the aerospace and automotive industries ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019). The goal of the project was to _increase the Technology Readiness Level (TRL) of the micorwave heating of composites (tooling and process optimization) to 6-7_. 
+This article discusses the system design and motivation of a data lake / data management SaaS platform that was built for an EU _Horizon 2020_ project in the domain of computer-aided manufacturing in the aerospace and automotive industries ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019). 
 
 Hint: _Looking for the discussion on system design?_ Skip directly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
 
@@ -14,7 +14,7 @@ __Software Solutions Team__
 - Research Associates: Maliha Qureshi, Simon Steuer
 - Developers: Adrian Lengenfelder, Valentina Veloso, Lukas Genssler, Katharina Broswik, Harshit Gupta
 
-In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built. 
+This document is the entry-point into the SIMUTOOL github organization which contains a public archive of the source code software solutions built in the project.
 
 
 
@@ -35,7 +35,7 @@ We achieved three main objectives:
 ## The Problem
 
 
-The following figure depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. 
+The goal of the project was to _increase the Technology Readiness Level (TRL) of the micorwave heating of composites (tooling and process optimization) to 6-7_. The following figure depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. 
 
 
 ![](profile/simutool-asynch-data-exchange.png)
@@ -75,22 +75,15 @@ The following figure shows how different systems, activites, and user personas, 
 
 ![](profile/simutool-systems-interaction.png)
 
+Below is a listing of some of the external-facing systems mentioned in the figure above. For a full list see Chapter 6 page 66 of the [dissertation of Nasr Kasrin](https://fis.uni-bamberg.de/handle/uniba/91269).
 
+ 
 | ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
 |----|----------------------------------|-------|-------------|----------------|-----------------------------------------------------------------------------------------------------------|
 | A  | PGD EM Solver                    | ECN   | n/a         | MATLAB         | 3D Maxwell solver for microscopic analysis of stratified media.                                           |
 | B  | PGD Parameterization Tool        | ECN   | n/a         | MATLAB         | For constructing a parametric model based on simulation data.                                             |
 | C  | ESI CEM One                      | ESI   | Proprietary | Windows/Linux  | A computational electromagnetic solution for virtual testing of large-scale industrial applications .     |
 | D  | ESI PAM-COMPOSITES               | ESI   | Proprietary | Windows/Linux  | Simulator suite for modeling the manufacturing process of composite structural components.                |
-| E  | Knowledge Graph Service          | UBA   | Apache 2.0  | Python         | Back-end knowledge graph store on manage and index heterogeneous data assets via metadata.                |
-| F  | Online Monitoring Tool           | UBA   | Apache 2.0  | Spring/Node.js | Visualizes sensor data, and assists user in metadata entry.                                               |
-| G  | KMS Web interface                | UBA   | Apache 2.0  | Python/Web2py  | Web interface to manage and explore the contents of the Knowledge Graph Service.                          |
-| H  | Automatic Knowledge Uploader     | UBA   | Apache 2.0  | Java           | A user-assisted meta-data extraction and entry application.                                               |
-| I  | Process Control Simulation GUI   | ETS   | Proprietary | Windows        | Software supporting automatic and user-guided temperature and power control simulation.                   |
-| J  | Temperature Variation Controler  | ETS   | Proprietary | LabVIEW        | Module providing the optimum allocation (distribution) of the MW oven power during manufacturing process. |
-| K  | Temperature Virtual Sensor GUI   | ETS   | Proprietary | Windows        | GUI for controlling the Virtual Sensor hardware.                                                          |
-| L  | Microwave dielectric measurement | ETS   | Proprietary | Windows        | For controlling the microwave dielectric measurement system.                                              |
-
 
 
 ## Scaling the Architecture
