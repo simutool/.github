@@ -21,10 +21,13 @@ Based on the insights we developed during our involvement in this domain and its
 
 ## The Problem
 
+
+The figure above depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. 
+
+
 ![](profile/simutool-asynch-data-exchange.png)
 
-
-The figure above depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. The project involved partners from eight geographically distributed locations with different areas of specialization and scopes of confidentiality, privacy, and legality, which did not know each other beforehand. It required the organization of various couplings of data-driven cooperations with dense networks of inter-dependencies to increase the turnover time of R&D activities and accumulate reusable data resources. 
+The project involved partners from eight geographically distributed locations with different areas of specialization and scopes of confidentiality, privacy, and legality, which did not know each other beforehand. It required the organization of various couplings of data-driven cooperations with dense networks of inter-dependencies to increase the turnover time of R&D activities and accumulate reusable data resources. 
 
 What is challenging in this domain is not the variety of data assets, but the interrelationships and data-driven dependencies across activities, particularly the simulation activities which are more data-drive. Revisiting our Figure, we have a partial view of some data sharing and exchange couplings between activities and groups. The _process control_ activity produces production recipes (sometimes called 'curing cycles') on how to manufacture a part of family of similar parts. The process control is dependent on the _process simulation_ of the part to be manufactured in the oven, and vice versa. The process control is also influenced by the _oven simulation_ activity, which simulates the behavior of the microwave oven based on its power, size, and controls. The _part design_ activity produces CAD/CAM models and other artifacts that specify the properties of the part to be produced. In as sense, most of the activities are driven by the data produced the part design, but the closest coupling is with the _micro- and  macro-simulation_ activities which focus on the modeling the behavior of the part in the whole production process, going from the micro-level (electro-magnetic / Maxwell equations), to macro-level simulation (heat coupling). 
 
@@ -32,25 +35,35 @@ To complicate it even further, several of the previous activities are part of em
 
 ## Architecture
 
+
+The figure below presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed with future scalability in mind when traffic increases or higher performance and availability is required. See the section [Scaling the Architecture](scaling-the-architecture) below for a possible scenario to scale this system. 
+
 ![](profile/simutool_system_design.drawio.svg)
 
 
-The figure above presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed with future scalability in mind when traffic increases or higher performance and availability is required. See the section (Scaling the Architecture)[scaling-the-architecture] below for one possible scenario to scale this system. This was achieved in two steps:
+Future scaling was planned for by two steps:
 
-- __Stateless nodes__: All the application servers (ex., platform layers) where designed to be stateless, hence horizontally scalable.
-- __Storage isolated in independent nodes__: The architecture was built with storage components isolated in their own nodes, leaving room for horizontal and/or vertical DB scaling architectures  in order to scale both to be scalable in 
+- _API-first distributed system design_: Interactions and interfaces between key components where designed and maintained as top-class citizens in the project.
+- _Stateless nodes_: All the application servers (ex., platform layers) where designed to be stateless, hence horizontally scalable.
+- _Storage isolated into independent nodes_: The architecture was built with storage components isolated in their own nodes, leaving room for horizontal and/or vertical DB scaling architectures  in order to scale both to be scalable in 
  
 
-Below are the key elements of the system:
+Below are the key elements of the system (with links to source code repo):
 
 * Data Lake Server ([simutool/kgservice](https://github.com/simutool/kgservice), [simutool/model-builder ](https://github.com/simutool/model-builder), [simutool/dm-reader](https://github.com/simutool/dm-reader), and others): Manage data lake entries, in specific metadata, storage, and discovery of data lake contents. It builds a semantic data model layer on top of a property graph store. 
 * Data Visualization Client ([simutool/om-tool](https://github.com/simutool/om-tool)): An application for visualizing manufacturing sensor data and comparing it with reference data, as well as uploading data assets and their metadata to the KGService.
 * Native OS Client ([simutool/aku-client](https://github.com/simutool/aku-client)): End-user application to assist users to add and upload data assets and their metadata to the Data Lake Server.
 
 
+
+## External Ecosystem 
+
+The figure above shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project.
+
 ![](profile/simutool-systems-interaction.png)
 
-The figure above shows how different systems, activites and user personas 
+
+![](profile/simutool-systems_cropped.png)
 
 
 ## Scaling the Architecture
