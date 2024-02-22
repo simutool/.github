@@ -2,9 +2,12 @@
 
 This article discusses the system design and motivation of a data lake / data management SaaS platform that was built for an EU _Horizon 2020_ project in the domain of computer-aided manufacturing in the aerospace and automotive industries ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019). The goal of the project was to _increase the Technology Readiness Level (TRL) of the micorwave heating of composites (tooling and process optimization) to 6-7_. 
 
-The project involved 8 companies with different specializations, terminologies, properietary systems, and scopes of data confidentiality, privacy, and legality. The nature of the work and the structure of the project led to dense networks of closely coupled data-driven interdependencies including activities such as simulation, sensor measurements, process control, material development, tooling, and prototyping. Our role was to devise a software solution to support this project. 
+Hint: __If you are looking for the discussion on system design__, you can skip directly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
 
-__Software Solution Teams (University of Bamberg)__:
+The project included 8 companies with different specializations, properietary systems, and scopes of data confidentiality, privacy, and legality. 
+It involved complex networks of closely coupled data-driven dependencies for data such as simulation data, sensor data, process control data. The role of the software solution team was to devise a solution to support and boost the perfomance of such projects with dense data sharing and exchange requirements.
+
+__Software Solutions Team (University of Bamberg)__:
 
 - Professor / Supervisor: Prof. Daniela Nicklas
 - Project Lead / Architect / Developer / Research Associate: Nasr Kasrin
@@ -13,7 +16,6 @@ __Software Solution Teams (University of Bamberg)__:
 
 In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built. 
 
-__If you are looking for the discussion on system design__, you can skip firectly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
 
 
 ## Achievements
