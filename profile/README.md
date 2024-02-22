@@ -2,7 +2,7 @@
 
 This article discusses the system design and motivation of a data lake / data management SaaS platform that was built for an EU _Horizon 2020_ project in the domain of computer-aided manufacturing in the aerospace and automotive industries ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019). The goal of the project was to _increase the Technology Readiness Level (TRL) of the micorwave heating of composites (tooling and process optimization) to 6-7_. 
 
-In this document (and github organization) we present an overview of the problem and the soltuon we developed.
+In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built.
 
 ## Introduction 
 
@@ -35,15 +35,22 @@ To complicate it even further, several of the previous activities are part of em
 ![](profile/simutool_system_design.drawio.svg)
 
 
-The figure above presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed with stateless nodes (application servers/platform layers) separating the storage from the application layer, to be scalable in case traffic increases or higher performance/availability is required. 
+The figure above presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed with future scalability in mind when traffic increases or higher performance and availability is required. See the section (Scaling the Architecture)[scaling-the-architecture] below for one possible scenario to scale this system. This was achieved in two steps:
 
- however we did not need to scale it further than that during its lifetime. However, key nodes have been designed as *stateless/scalable* that can be scaled when needed. See the section below for a discussion of one possible scenario to scale the system design. 
+- __Stateless nodes__: All the application servers (ex., platform layers) where designed to be stateless, hence horizontally scalable.
+- __Storage isolated in independent nodes__: The architecture was built with storage components isolated in their own nodes, leaving room for horizontal and/or vertical DB scaling architectures  in order to scale both to be scalable in 
+ 
 
 Below are the key elements of the system:
 
 * Data Lake Server ([simutool/kgservice](https://github.com/simutool/kgservice), [simutool/model-builder ](https://github.com/simutool/model-builder), [simutool/dm-reader](https://github.com/simutool/dm-reader), and others): Manage data lake entries, in specific metadata, storage, and discovery of data lake contents. It builds a semantic data model layer on top of a property graph store. 
 * Data Visualization Client ([simutool/om-tool](https://github.com/simutool/om-tool)): An application for visualizing manufacturing sensor data and comparing it with reference data, as well as uploading data assets and their metadata to the KGService.
 * Native OS Client ([simutool/aku-client](https://github.com/simutool/aku-client)): End-user application to assist users to add and upload data assets and their metadata to the Data Lake Server.
+
+
+![](profile/simutool-systems-interaction.png)
+
+The figure above shows how different systems, activites and user personas 
 
 
 ## Scaling the Architecture
