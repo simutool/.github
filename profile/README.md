@@ -7,7 +7,7 @@ Hint: _Looking for the discussion on system design?_ Skip directly to [Scaling t
 The project included 8 companies with different specializations, properietary systems, and scopes of data confidentiality, privacy, and legality. 
 It involved complex networks of closely coupled data-driven dependencies for data such as simulation data, sensor data, process control data. The role of the software solution team was to devise a solution to support and boost the perfomance of such projects with dense data sharing and exchange requirements.
 
-__Software Solutions Team__
+### Software Solutions Team
 
 - Professor / Supervisor: Prof. Daniela Nicklas (University of Bamberg)
 - Project Lead / Architect / Developer / Research Associate: Nasr Kasrin
@@ -54,14 +54,14 @@ The figure below presents the deployed SaaS architecture during the lifetime the
 ![](profile/simutool_system_design.drawio.svg)
 
 
-Future scaling was planned for by two steps:
+### Future-Proof Design Principles:
 
 - _API-first distributed system design_: Interactions and interfaces between key components where designed and maintained as top-class citizens in the project.
 - _Stateless nodes_: All the application servers (ex., platform layers) where designed to be stateless, hence horizontally scalable.
 - _Storage isolated into independent nodes_: The architecture was built with storage components isolated in their own nodes, leaving room for horizontal and/or vertical DB scaling architectures  in order to scale both to be scalable in 
  
 
-Below are the key elements of the system (with links to source code repo):
+### Key Components of the System
 
 * Data Lake Server ([simutool/kgservice](https://github.com/simutool/kgservice), [simutool/model-builder ](https://github.com/simutool/model-builder), [simutool/dm-reader](https://github.com/simutool/dm-reader), and others): Manage data lake entries, in specific metadata, storage, and discovery of data lake contents. It builds a semantic data model layer on top of a property graph store. 
 * Data Visualization Client ([simutool/om-tool](https://github.com/simutool/om-tool)): An application for visualizing manufacturing sensor data and comparing it with reference data, as well as uploading data assets and their metadata to the KGService.
@@ -71,11 +71,10 @@ Below are the key elements of the system (with links to source code repo):
 
 ## External Ecosystem 
 
-The following figure shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project. 
+The following figure shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project. Below is a table listing of some of these systems (for a full list see page 66 of the [dissertation](https://fis.uni-bamberg.de/handle/uniba/91269) of Nasr Kasrin.
 
 ![](profile/simutool-systems-interaction.png)
 
-Below is a listing of some of the external-facing systems mentioned in the figure above. For a full list see Chapter 6 page 66 of the [dissertation of Nasr Kasrin](https://fis.uni-bamberg.de/handle/uniba/91269).
 
  
 | ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
