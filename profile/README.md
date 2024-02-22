@@ -19,7 +19,7 @@ This document is the entry-point into the SIMUTOOL github organization which con
 
 Project page at the University of Bamberg: [uni-bamberg.de/en/mobi/research/simutool](https://www.uni-bamberg.de/en/mobi/research/simutool/)
 
-Project page at the European Commission: [cordis.europa.eu/project/id/680569](https://cordis.europa.eu/project/id/680569)
+Project page at the European Commission's portal : [cordis.europa.eu/project/id/680569](https://cordis.europa.eu/project/id/680569)
 
 
 ## Achievements Overview
