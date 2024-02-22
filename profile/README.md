@@ -6,6 +6,18 @@ The project involved a consortium of 8 organizations working cooperatively on an
 
 Based on the insights developed based on our involvement in this domain and its end-users, we designed and developed a software suite for supporting data-driven collaboration and data sharing for manufacturing projects. In this repository (and github organization) we present the technical architecture as well as the source code of some form the components we developed.
 
+
+## The Problem
+
+![](profile/simuttol-asynch-data-exchange.png)
+
+
+The figure above depicts a partial view of some data sharing and exchange relationships between activities and groups in the project. The approach included the use of several kinds of simulations at different levels of granularity and using various methods such as electromagnetic field simulations, heat transfer simulations, oven simulations (etc.), along with other activities traditionally associated with production technology research lifecycle such as measurements, process control, material development and tooling, prototyping, etc. The project involved partners from eight geographically distributed locations with different areas of specialization and scopes of confidentiality, privacy, and legality, which did not know each other beforehand. It required the organization of various couplings of data-driven cooperations with dense networks of inter-dependencies to increase the turnover time of R&D activities and accumulate reusable data resources. 
+
+What is challenging in this domain is not the variety of data assets, but the interrelationships and data-driven dependencies across activities, particularly the simulation activities which are more data-drive. Revisiting our Figure, we have a partial view of some data sharing and exchange couplings between activities and groups. The _process control_ activity produces production recipes (sometimes called `curing cycles') on how to manufacture a part of family of similar parts. The process control is dependent on the _process simulation_ of the part to be manufactured in the oven, and vice versa. The process control is also influenced by the _oven simulation_ activity, which simulates the behavior of the microwave oven based on its power, size, and controls. The _part design_ activity produces CAD/CAM models and other artifacts that specify the properties of the part to be produced. In as sense, most of the activities are driven by the data produced the part design, but the closest coupling is with the _micro- and  macro-simulation_ activities which focus on the modeling the behavior of the part in the whole production process, going from the micro-level (electro-magnetic / Maxwell equations), to macro-level simulation (heat coupling). 
+
+To complicate it even further, several of the previous activities are part of embedded cycles in which several activities closely cooperate on a problem until a stable result is reached (ex., a well-tuned, stable simulation of some part or process). One such cycle is depicted as a dashed square around the micro- and macro-simulation activities.
+
 ## Architecture
 
 ![](profile/simutool_system_design.drawio.svg)
