@@ -36,7 +36,7 @@ To complicate it even further, several of the previous activities are part of em
 ## Architecture
 
 
-The figure below presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed with future scalability in mind when traffic increases or higher performance and availability is required. See the section [Scaling the Architecture](profile/README/scaling-the-architecture) below for a possible scenario to scale this system. 
+The figure below presents the deployed SaaS architecture during the lifetime the system was used by the end users. The system was designed with future scalability in mind when traffic increases or higher performance and availability is required. See the section [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture) below for a possible scenario to scale this system. 
 
 ![](profile/simutool_system_design.drawio.svg)
 
