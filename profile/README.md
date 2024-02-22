@@ -2,21 +2,20 @@
 
 This article discusses the system design and motivation of a data lake / data management SaaS platform that was built for an EU _Horizon 2020_ project in the domain of computer-aided manufacturing in the aerospace and automotive industries ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019). The goal of the project was to _increase the Technology Readiness Level (TRL) of the micorwave heating of composites (tooling and process optimization) to 6-7_. 
 
+The project involved 8 companies with different specializations, terminologies, properietary systems, and scopes of data confidentiality, privacy, and legality. The nature of the work and the structure of the project led to dense networks of closely coupled data-driven interdependencies including activities such as simulation, sensor measurements, process control, material development, tooling, and prototyping. Our role was to devise a software solution to support this project. 
+
+We devised and built an end-to-end eco-system of tools centered around a data lake to streamline the sharing and exchanging of data assets across systems, participants, and groups.
+
+We achieved three main objectives:
+
+1. Speed up turn-around time of the R&D process by 30% due to providing an end-to-end solution to share and exchange data assets across participants and groups.
+2. Cut down 50% of the time wasted to search and find data assets.
+3. Eliminating time wasted due to asking participants to re-upload or re-share the location of their data.
+4. Increased data asset re-use by 200% due to developing a controlled vocabulary and semantic technologies to describe data assets to increase their lifetime beyond that of their uploader.
+
+
 In this document (and github organization) we present an overview of the problem and the soltuon we developed, as well as an archive of the software we built.
 
-## Introduction 
-
-The project involved 8 companies with different specializations, terminologies, properietary systems, and scopes of data confidentiality, privacy, and legality.
-
-The nature of the work and the structure of the project led to dense networks of closely coupled data-driven interdependencies including activities such as simulation, sensor measurements, process control, material development, tooling, and prototyping. 
-
-Our role was support this project by devising a software solution to:
-
-1. Speed up turn-around time and strengthening data-driven collaborabiltiy.
-2. Support persistence and accumulation of data assets.
-3. Enable discoverability and re-use of data assets.
-
-Based on the insights we developed during our involvement in this domain and its end-users, we designed and developed a data lake / data management SaaS platform. 
 
 
 ## The Problem
@@ -58,22 +57,37 @@ Below are the key elements of the system (with links to source code repo):
 
 ## External Ecosystem 
 
-The figure above shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project.
+The figure above shows how different systems, activites, and user personas, fit within the overarching ecosystem of the project. Letters in circles denote the _external-facing_ systems of the different companies involved in the project. 
 
 ![](profile/simutool-systems-interaction.png)
 
 
-![](profile/simutool-systems_cropped.png)
+| ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
+|----|----------------------------------|-------|-------------|----------------|-----------------------------------------------------------------------------------------------------------|
+| A  | PGD EM Solver                    | ECN   | n/a         | MATLAB         | 3D Maxwell solver for microscopic analysis of stratified media.                                           |
+| B  | PGD Parameterization Tool        | ECN   | n/a         | MATLAB         | For constructing a parametric model based on simulation data.                                             |
+| C  | ESI CEM One                      | ESI   | Proprietary | Windows/Linux  | A computational electromagnetic solution for virtual testing of large-scale industrial applications .     |
+| D  | ESI PAM-COMPOSITES               | ESI   | Proprietary | Windows/Linux  | Simulator suite for modeling the manufacturing process of composite structural components.                |
+| E  | Knowledge Graph Service          | UBA   | Apache 2.0  | Python         | Back-end knowledge graph store on manage and index heterogeneous data assets via metadata.                |
+| F  | Online Monitoring Tool           | UBA   | Apache 2.0  | Spring/Node.js | Visualizes sensor data, and assists user in metadata entry.                                               |
+| G  | KMS Web interface                | UBA   | Apache 2.0  | Python/Web2py  | Web interface to manage and explore the contents of the Knowledge Graph Service.                          |
+| H  | Automatic Knowledge Uploader     | UBA   | Apache 2.0  | Java           | A user-assisted meta-data extraction and entry application.                                               |
+| I  | Process Control Simulation GUI   | ETS   | Proprietary | Windows        | Software supporting automatic and user-guided temperature and power control simulation.                   |
+| J  | Temperature Variation Controler  | ETS   | Proprietary | LabVIEW        | Module providing the optimum allocation (distribution) of the MW oven power during manufacturing process. |
+| K  | Temperature Virtual Sensor GUI   | ETS   | Proprietary | Windows        | GUI for controlling the Virtual Sensor hardware.                                                          |
+| L  | Microwave dielectric measurement | ETS   | Proprietary | Windows        | For controlling the microwave dielectric measurement system.                                              |
+
 
 
 ## Scaling the Architecture
 
+
+System scaling is a function of (1) the usage patterns of the system , (2) the desired performance and availability, (2) as well as the resources available to the project. Given our context (described below), we projected the following scalability scenario of the project as shown in the figure below.  
+
 ![](profile/simutool_system_design_scaled.drawio.svg)
 
 
-System scaling varies greatly based on the context. It is at least a function of the properties and the usage patterns of the system, as well the availability rate desired and the resources available. 
-
-During our experiences with the system above, we observed the following properties:
+The rationale was as follows:
 
 
 1. *Read-Heavy*: The system is read-heavy, particularly the **Catalog DB** (which contains the metadata of the data lake contents) and to a lesser degree the **Blob Store Server** (which stores heterogenous file types in their original format). However, there are *two key differences*:
