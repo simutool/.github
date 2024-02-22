@@ -46,7 +46,7 @@ The part design activity generated CAD/CAM models and other specifications, driv
 
 
 
-## Architecture: Ensuring Future Scalability
+## Architecture
 
 The figure below showcases the deployed SaaS architecture utilized throughout the system's operational lifespan. From its inception, the system was designed with future scalability in mind, poised to accommodate increased traffic volumes and the need for enhanced performance and availability. For a detailed exploration of potential scaling scenarios for this system, refer to the section [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture) below.
 
