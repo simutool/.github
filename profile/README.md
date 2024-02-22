@@ -42,8 +42,6 @@ With partners spanning eight geographically dispersed locations, each with disti
 
 The crux of the challenge lay not in the diversity of data assets but in the intricate interplay and data-driven dependencies across activities, particularly within simulation activities. For instance, the process control activity relied on production recipes, influenced by process simulations of the part, and vice versa. Moreover, the process control was further shaped by oven simulations, which predicted the behavior of microwave ovens based on their specifications.
 
-The part design activity generated CAD/CAM models and other specifications, driving most activities, but closely intertwined with micro- and macro-simulation activities, which modeled the part's behavior throughout the production process, ranging from electromagnetic equations to heat coupling.
-
 
 
 ## Architecture
