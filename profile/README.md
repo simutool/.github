@@ -2,7 +2,7 @@
 
 This overview delves into the design and purpose behind the creation of the SIMUTOOL Data Lake, a software platform developed as part of an EU Horizon 2020 project focused on computer-aided manufacturing within the aerospace and automotive sectors ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019).
 
-Hint: _Looking for the discussion on system design?_ Skip directly to [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture).
+Hint: _Looking for the discussion on system design?_ Skip directly to [Architecture](https://github.com/simutool#architecture).
 
 The project brought together 8 companies each with unique specializations, proprietary systems, and varying levels of concern regarding data confidentiality, privacy, and legal compliance. Within this collaborative framework, there existed intricate networks of interdependent data streams including simulation data, sensor data, and process control data. The objective of the software solution team was to devise a robust platform capable of supporting and enhancing the performance of such projects with intensive data sharing and exchange requirements.
 
