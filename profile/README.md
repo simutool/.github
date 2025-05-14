@@ -40,7 +40,7 @@ Our efforts yielded four key accomplishments:
 
 The project aimed to elevate the Technology Readiness Level (TRL) of microwave heating of composites for tooling and process optimization to levels 6-7. Illustrated below is a partial representation of the intricate web of data sharing and exchange relationships among various project activities and groups:
 
-![Partial View of Data Sharing Relationships](profile/simutool-asynch-data-exchange.png)
+![Partial View of Data Sharing Relationships](simutool-asynch-data-exchange.png)
 
 With partners spanning eight geographically dispersed locations, each with distinct areas of expertise and considerations of confidentiality, privacy, and legality, the project faced the challenge of forging collaborations among previously unacquainted entities. The endeavor demanded to build an end-to-end software solution for streamlining the dense networks of data-driven cooperations to expedite R&D activities and amass reusable data resources.
 
@@ -54,7 +54,7 @@ Based on the analysis of the domain, we successfully conceptualized and construc
 
 The figure below showcases the deployed SaaS architecture utilized throughout the system's operational lifespan. From its inception, the system was designed with future scalability in mind, poised to accommodate increased traffic volumes and the need for enhanced performance and availability. For a detailed exploration of potential scaling scenarios for this system, refer to the section [Scaling the Architecture](https://github.com/simutool#scaling-the-architecture) below.
 
-![](profile/simutool_system_design.drawio.svg)
+![](simutool_system_design.drawio.svg)
 
 ### Future-Proof Design Principles
 
@@ -78,7 +78,7 @@ The figure below showcases the deployed SaaS architecture utilized throughout th
 
 The following depiction illustrates how diverse systems, activities, and user personas intertwine within the expansive ecosystem of the project. Circular identifiers denote the _external-facing_ systems of the various companies involved in the project. Additionally, a table below outlines select systems, with a comprehensive list available on page 66 of the [dissertation](https://fis.uni-bamberg.de/handle/uniba/91269) by Nasr Kasrin.
 
-![](profile/simutool-systems-interaction.png)
+![](simutool-systems-interaction.png)
 
 | ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
 |----|----------------------------------|-------|-------------|----------------|-----------------------------------------------------------------------------------------------------------|
@@ -94,7 +94,7 @@ This table showcases a glimpse of the external-facing systems, each contributing
 
 System scalability hinges on several factors: usage patterns, desired performance and availability, and available project resources. The architecture depicted in the following figure is tailored to meet the specific requirements of our domain. 
 
-![](profile/simutool_system_design_scaled.drawio.svg)
+![](simutool_system_design_scaled.drawio.svg)
 
 ### Design Rationale
 
