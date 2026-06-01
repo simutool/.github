@@ -5,7 +5,7 @@ A deployed data-cataloging and sharing platform built for an EU Horizon 2020 pro
 This is the inter-organizational data-sharing problem now addressed by initiatives like Catena-X and the EU Data Act, tackled here hands-on, in the field, years before those existed.
 
 > **System-design deep-dive:** see [ARCHITECTURE.md](./ARCHITECTURE.md).
-> **Research context:** [dissertation](https://fis.uni-bamberg.de/handle/uniba/91269) ·
+> **Research context:** [dissertation](https://fis.uni-bamberg.de/handle/uniba/91269) · 
 > [CORDIS](https://cordis.europa.eu/project/id/680569) ·
 > [project page, Uni Bamberg](https://www.uni-bamberg.de/en/mobi/research/simutool/)
 
@@ -26,7 +26,6 @@ A platform centered on describing and exchanging data assets rather than moving 
 
 The system was deployed and used across the consortium for the duration of the project. The repositories in this organization are an **archived snapshot of the project's prototype implementation**, preserved for reference.
 
-*(Outcomes, if you can source them: an internal project evaluation reported faster R&D turnaround and reduced time locating data assets. Keep only the figures you can stand behind.)*
 
 ## Team & role
 
