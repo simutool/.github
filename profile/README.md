@@ -45,9 +45,9 @@ Circular identifiers in the diagram denote the external-facing systems of partic
 
 | ID | System | Owner | License | Platform | Description |
 |----|--------|-------|---------|----------|-------------|
-| A | PGD EM Solver | ECN | n/a | MATLAB | 3D Maxwell solver for microscopic analysis of stratified media. |
-| B | PGD Parameterization Tool | ECN | n/a | MATLAB | Builds parametric models from simulation data. |
-| C | ESI CEM One | ESI | Proprietary | Windows/Linux | Computational electromagnetics for virtual testing at industrial scale. |
-| D | ESI PAM-COMPOSITES | ESI | Proprietary | Windows/Linux | Simulator suite for the composite-manufacturing process. |
+| A | PGD EM Solver | [École centrale de Nantes](https://www.ec-nantes.fr) | n/a | MATLAB | 3D Maxwell solver for microscopic analysis of stratified media. |
+| B | PGD Parameterization Tool | [École centrale de Nantes](https://www.ec-nantes.fr) | n/a | MATLAB | Builds parametric models from simulation data. |
+| C | ESI CEM One | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux | Computational electromagnetics for virtual testing at industrial scale. |
+| D | ESI PAM-COMPOSITES | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux | Simulator suite for the composite-manufacturing process. |
 
 
