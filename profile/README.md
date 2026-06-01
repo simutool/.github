@@ -27,6 +27,17 @@ A platform centered on describing and exchanging data assets rather than moving 
 
 The system was deployed and used across the consortium for the duration of the project. The repositories in this organization are an **archived snapshot of the project's prototype implementation**, preserved for reference.
 
+### Goals
+
+1. **Accelerating R&D Processes**: Shortening turnaround time between R&D, engineering, and production by simplifying the sharing of data across orgranizations.
+
+2. **Enhancing Data Discovery**: Easily find data assets within a shared catalog.
+
+3. **Streamlining Data Management**: Eliminating inefficiencies associated with requesting participants to re-upload or re-share data, thus saving valuable time.
+
+4. **Promoted Data Asset Reusability**: Leveraging controlled vocabulary and semantic technologies, thereby extending their lifespan beyond their original uploader's involvement.
+
+
 
 ## Team & role
 

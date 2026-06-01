@@ -2,30 +2,6 @@
 
 This document delves into the **system design** of the SIMUTOOL inter-organizational data sharing system. For a project overview, see [github.com/simutool](https://github.com/simutool).
 
-## Project Goals
-
-1. **Accelerating R&D Processes**: Shortening turnaround time between R&D, engineering, and production by simplifying the sharing of data across orgranizations.
-
-2. **Enhancing Data Discovery**: Easily find data assets within a shared catalog.
-
-3. **Streamlining Data Management**: Eliminating inefficiencies associated with requesting participants to re-upload or re-share data, thus saving valuable time.
-
-4. **Promoted Data Asset Reusability**: Leveraging controlled vocabulary and semantic technologies, thereby extending their lifespan beyond their original uploader's involvement.
-
-
-
-## The Project Challenge
-
-The project aimed to elevate the Technology Readiness Level (TRL) of microwave heating of composites for tooling and process optimization to levels 6-7. Illustrated below is a partial representation of the intricate web of data sharing and exchange relationships among various project activities and groups:
-
-![Partial View of Data Sharing Relationships](simutool-asynch-data-exchange.png)
-
-With partners spanning eight geographically dispersed locations, each with distinct areas of expertise and considerations of confidentiality, privacy, and legality, the project faced the challenge of forging collaborations among previously unacquainted entities. The endeavor demanded to build an end-to-end software solution for streamlining the dense networks of data-driven cooperations to expedite R&D activities and amass reusable data resources.
-
-The crux of the challenge lay not in the diversity of data assets but in the intricate interplay and data-driven dependencies across activities, particularly within simulation activities. For instance, the process control activity relied on production recipes, influenced by process simulations of the part, and vice versa. Moreover, the process control was further shaped by oven simulations, which predicted the behavior of microwave ovens based on their specifications.
-
-
-
 ## Architecture
 
 Based on the analysis of the domain, we successfully conceptualized and constructed a comprehensive ecosystem of tools, centralized around a dynamic data lake, aimed at optimizing the seamless sharing and exchange of data assets among heterogenous systems/interfaces, participants, and groups.
