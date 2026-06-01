@@ -60,14 +60,14 @@ The following depiction illustrates how diverse systems, activities, and user pe
 
 | ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
 |----|----------------------------------|-------|-------------|----------------|-----------------------------------------------------------------------------------------------------------|
-| A  | PGD EM Solver                    | ECN   | n/a         | MATLAB         | Employs a 3D Maxwell solver for microscopic analysis of stratified media.                                  |
-| B  | PGD Parameterization Tool        | ECN   | n/a         | MATLAB         | Facilitates the construction of parametric models based on simulation data.                                |
-| C  | ESI CEM One                      | ESI   | Proprietary | Windows/Linux  | Offers a computational electromagnetic solution for virtual testing of large-scale industrial applications.|
-| D  | ESI PAM-COMPOSITES               | ESI   | Proprietary | Windows/Linux  | Provides a simulator suite for modeling the manufacturing process of composite structural components.     |
-| E  | Data Catalog						| UBA   | Apache 2.0  | Backend / API Service |  Manages creating, discovering, and managing inter-organizational data assets. |
-| F  | Online Monitoring Tool			| UBA   | Apache 2.0  | Dashboard / Web App |   Visualizes sensor data, and assists users in metadata entry / data asset creation. |
-| G  | KMS Web Interface				| UBA   | Apache 2.0  | Web Application |  Allows users to access the data catalog in a GUI. |
-| H  | Automatic Knowledge Uploader		| UBA   | Apache 2.0  | Local OS Deamon |  Facilitates the users' generation and entry of the metadata of data assets. |
+| A  | PGD EM Solver                    |  [École centrale de Nantes](https://www.ec-nantes.fr) | n/a         | MATLAB         | Employs a 3D Maxwell solver for microscopic analysis of stratified media.                                  |
+| B  | PGD Parameterization Tool        |  [École centrale de Nantes](https://www.ec-nantes.fr) | n/a         | MATLAB         | Facilitates the construction of parametric models based on simulation data.                                |
+| C  | ESI CEM One                      | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux  | Offers a computational electromagnetic solution for virtual testing of large-scale industrial applications.|
+| D  | ESI PAM-COMPOSITES               | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux  | Provides a simulator suite for modeling the manufacturing process of composite structural components.     |
+| E  | Data Catalog						|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Backend / API Service |  Manages creating, discovering, and managing inter-organizational data assets. |
+| F  | Online Monitoring Tool			|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Dashboard / Web App |   Visualizes sensor data, and assists users in metadata entry / data asset creation. |
+| G  | KMS Web Interface				|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Web Application |  Allows users to access the data catalog in a GUI. |
+| H  | Automatic Knowledge Uploader		|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Local OS Deamon |  Facilitates the users' generation and entry of the metadata of data assets. |
 | I | Process Control Simulation GUI	| ETS   | Proprietary | Windows      | Solution supporting automatic and user-guided temperature and power control simulation. |
 | J |  Temperature Variation Controler | ETS   | Proprietary | Windows      | LabVIEW Module providing the optimum allocation (distribution) of the MW oven power during manufacturing process. |
 | K | Temperature Virtual Sensor GUI  | ETS   | Proprietary | Windows      | Windows GUI for controlling the Virtual Sensor hardware. |

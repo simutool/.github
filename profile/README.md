@@ -43,11 +43,17 @@ Circular identifiers in the diagram denote the external-facing systems of partic
 
 ![External systems and personas in the project ecosystem](simutool-systems-interaction.png)
 
-| ID | System | Owner | License | Platform | Description |
-|----|--------|-------|---------|----------|-------------|
-| A | PGD EM Solver | [École centrale de Nantes](https://www.ec-nantes.fr) | n/a | MATLAB | 3D Maxwell solver for microscopic analysis of stratified media. |
-| B | PGD Parameterization Tool | [École centrale de Nantes](https://www.ec-nantes.fr) | n/a | MATLAB | Builds parametric models from simulation data. |
-| C | ESI CEM One | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux | Computational electromagnetics for virtual testing at industrial scale. |
-| D | ESI PAM-COMPOSITES | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux | Simulator suite for the composite-manufacturing process. |
-
-
+| ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
+|----|----------------------------------|-------|-------------|----------------|-----------------------------------------------------------------------------------------------------------|
+| A  | PGD EM Solver                    |  [École centrale de Nantes](https://www.ec-nantes.fr) | n/a         | MATLAB         | Employs a 3D Maxwell solver for microscopic analysis of stratified media.                                  |
+| B  | PGD Parameterization Tool        |  [École centrale de Nantes](https://www.ec-nantes.fr) | n/a         | MATLAB         | Facilitates the construction of parametric models based on simulation data.                                |
+| C  | ESI CEM One                      | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux  | Offers a computational electromagnetic solution for virtual testing of large-scale industrial applications.|
+| D  | ESI PAM-COMPOSITES               | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux  | Provides a simulator suite for modeling the manufacturing process of composite structural components.     |
+| E  | Data Catalog						|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Backend / API Service |  Manages creating, discovering, and managing inter-organizational data assets. |
+| F  | Online Monitoring Tool			|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Dashboard / Web App |   Visualizes sensor data, and assists users in metadata entry / data asset creation. |
+| G  | KMS Web Interface				|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Web Application |  Allows users to access the data catalog in a GUI. |
+| H  | Automatic Knowledge Uploader		|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Local OS Deamon |  Facilitates the users' generation and entry of the metadata of data assets. |
+| I | Process Control Simulation GUI	| ETS   | Proprietary | Windows      | Solution supporting automatic and user-guided temperature and power control simulation. |
+| J |  Temperature Variation Controler | ETS   | Proprietary | Windows      | LabVIEW Module providing the optimum allocation (distribution) of the MW oven power during manufacturing process. |
+| K | Temperature Virtual Sensor GUI  | ETS   | Proprietary | Windows      | Windows GUI for controlling the Virtual Sensor hardware. |
+| L | Microwave dielectric measurement  | ETS   | Proprietary | Windows      |Windows For controlling the microwave dielectric measurement system. |
