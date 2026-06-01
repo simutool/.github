@@ -1,38 +1,16 @@
-# SIMUTOOL Technical Architecture
+# SIMUTOOL System Design
 
-This overview delves into the design and purpose behind the creation of the SIMUTOOL Data Lake, a software platform developed as part of an EU Horizon 2020 project focused on computer-aided manufacturing within the aerospace and automotive sectors ([SIMUTOOL](https://doi.org/10.3030/680569), 2015-2019).
+This document delves into the **system design** of the SIMUTOOL inter-organizational data sharing system. For a project overview, see [github.com/simutool](https://github.com/simutool).
 
-> _Hint_: This document dives into _system design_, for a project-wide view see [README.md](https://github.com/simutool).
+## Project Goals
 
-The project brought together 8 companies each with unique specializations, proprietary systems, and varying levels of concern regarding data confidentiality, privacy, and legal compliance. Within this collaborative framework, there existed intricate networks of interdependent data streams including simulation data, sensor data, and process control data. The objective of the software solution team was to devise a robust platform capable of supporting and enhancing the performance of such projects with intensive data sharing and exchange requirements.
+1. **Accelerating R&D Processes**: Shortening turnaround time between R&D, engineering, and production by simplifying the sharing of data across orgranizations.
 
+2. **Enhancing Data Discovery**: Easily find data assets within a shared catalog.
 
-### Software Solutions Team
+3. **Streamlining Data Management**: Eliminating inefficiencies associated with requesting participants to re-upload or re-share data, thus saving valuable time.
 
-- Professor / Supervisor: Prof. Daniela Nicklas (University of Bamberg)
-- Project Lead / Architect / Developer / Research Associate: Nasr Kasrin
-- Research Associates: Maliha Qureshi, Simon Steuer
-- Developers: Adrian Lengenfelder, Valentina Veloso, Lukas Genssler, Katharina Broswik, Harshit Gupta
-
-This document is the entry-point into the SIMUTOOL github organization which contains a public archive of the source code software solutions built in the project.
-
-
-Project page at the University of Bamberg: [uni-bamberg.de/en/mobi/research/simutool](https://www.uni-bamberg.de/en/mobi/research/simutool/)
-
-Project page at the European Commission's portal : [cordis.europa.eu/project/id/680569](https://cordis.europa.eu/project/id/680569)
-
-
-## Achievements Overview
-
-Our efforts yielded four key accomplishments:
-
-1. **Accelerated R&D Processes**: By providing an integrated solution for sharing and exchanging data assets across participants and groups, we achieved a notable 30% reduction in the turnaround time of the R&D process.
-
-2. **Enhanced Data Discovery**: We effectively slashed the time spent searching for and locating data assets by an impressive 50%.
-
-3. **Streamlined Data Management**: Our system eliminated inefficiencies associated with requesting participants to re-upload or re-share data, thus saving valuable time.
-
-4. **Promoted Data Asset Reusability**: Leveraging controlled vocabulary and semantic technologies, we significantly increased data asset reusability by an impressive 200%, thereby extending their lifespan beyond their original uploader's involvement.
+4. **Promoted Data Asset Reusability**: Leveraging controlled vocabulary and semantic technologies, thereby extending their lifespan beyond their original uploader's involvement.
 
 
 
@@ -86,6 +64,15 @@ The following depiction illustrates how diverse systems, activities, and user pe
 | B  | PGD Parameterization Tool        | ECN   | n/a         | MATLAB         | Facilitates the construction of parametric models based on simulation data.                                |
 | C  | ESI CEM One                      | ESI   | Proprietary | Windows/Linux  | Offers a computational electromagnetic solution for virtual testing of large-scale industrial applications.|
 | D  | ESI PAM-COMPOSITES               | ESI   | Proprietary | Windows/Linux  | Provides a simulator suite for modeling the manufacturing process of composite structural components.     |
+| E  | Data Catalog						| UBA   | Apache 2.0  | Backend / API Service |  Manages creating, discovering, and managing inter-organizational data assets. |
+| F  | Online Monitoring Tool			| UBA   | Apache 2.0  | Dashboard / Web App |   Visualizes sensor data, and assists users in metadata entry / data asset creation. |
+| G  | KMS Web Interface				| UBA   | Apache 2.0  | Web Application |  Allows users to access the data catalog in a GUI. |
+| H  | Automatic Knowledge Uploader		| UBA   | Apache 2.0  | Local OS Deamon |  Facilitates the users' generation and entry of the metadata of data assets. |
+| I | Process Control Simulation GUI	| ETS   | Proprietary | Windows      | Solution supporting automatic and user-guided temperature and power control simulation. |
+| J |  Temperature Variation Controler | ETS   | Proprietary | Windows      | LabVIEW Module providing the optimum allocation (distribution) of the MW oven power during manufacturing process. |
+| K | Temperature Virtual Sensor GUI  | ETS   | Proprietary | Windows      | Windows GUI for controlling the Virtual Sensor hardware. |
+| L | Microwave dielectric measurement  | ETS   | Proprietary | Windows      |Windows For controlling the microwave dielectric measurement system. |
+
 
 This table showcases a glimpse of the external-facing systems, each contributing unique capabilities to the collaborative endeavor.
 
