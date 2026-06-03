@@ -27,32 +27,6 @@ The figure below showcases the deployed SaaS architecture utilized throughout th
 - **Native OS Client ([simutool/aku-client](https://github.com/simutool/aku-client))**: This end-user application aids users in adding and uploading data assets and their metadata to the Data Lake Server.
 
 
-
-## External Ecosystem
-
-The following depiction illustrates how diverse systems, activities, and user personas intertwine within the expansive ecosystem of the project. Circular identifiers denote the _external-facing_ systems of the various companies involved in the project. Additionally, a table below outlines select systems, with a comprehensive list available on page 66 of the [dissertation](https://fis.uni-bamberg.de/handle/uniba/91269) by Nasr Kasrin.
-
-![](simutool-systems-interaction.png)
-
-| ID | Systems                          | Owner | License     | Platform       | Description                                                                                               |
-|----|----------------------------------|-------|-------------|----------------|-----------------------------------------------------------------------------------------------------------|
-| A  | PGD EM Solver                    |  [École centrale de Nantes](https://www.ec-nantes.fr) | n/a         | MATLAB         | Employs a 3D Maxwell solver for microscopic analysis of stratified media.                                  |
-| B  | PGD Parameterization Tool        |  [École centrale de Nantes](https://www.ec-nantes.fr) | n/a         | MATLAB         | Facilitates the construction of parametric models based on simulation data.                                |
-| C  | ESI CEM One                      | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux  | Offers a computational electromagnetic solution for virtual testing of large-scale industrial applications.|
-| D  | ESI PAM-COMPOSITES               | [ESI Group](https://esi-group.com/) | Proprietary | Windows/Linux  | Provides a simulator suite for modeling the manufacturing process of composite structural components.     |
-| E  | Data Catalog						|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Backend / API Service |  Manages creating, discovering, and managing inter-organizational data assets. |
-| F  | Online Monitoring Tool			|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Dashboard / Web App |   Visualizes sensor data, and assists users in metadata entry / data asset creation. |
-| G  | KMS Web Interface				|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Web Application |  Allows users to access the data catalog in a GUI. |
-| H  | Automatic Knowledge Uploader		|[Bamberg University](https://www.uni-bamberg.de/en/)  | Apache 2.0  | Local OS Deamon |  Facilitates the users' generation and entry of the metadata of data assets. |
-| I | Process Control Simulation GUI	| ETS   | Proprietary | Windows      | Solution supporting automatic and user-guided temperature and power control simulation. |
-| J |  Temperature Variation Controler | ETS   | Proprietary | Windows      | LabVIEW Module providing the optimum allocation (distribution) of the MW oven power during manufacturing process. |
-| K | Temperature Virtual Sensor GUI  | ETS   | Proprietary | Windows      | Windows GUI for controlling the Virtual Sensor hardware. |
-| L | Microwave dielectric measurement  | ETS   | Proprietary | Windows      |Windows For controlling the microwave dielectric measurement system. |
-
-
-This table showcases a glimpse of the external-facing systems, each contributing unique capabilities to the collaborative endeavor.
-
-
 ## Scaling the Architecture
 
 System scalability hinges on several factors: usage patterns, desired performance and availability, and available project resources. The architecture depicted in the following figure is tailored to meet the specific requirements of our domain. 
