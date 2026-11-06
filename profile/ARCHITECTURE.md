@@ -20,11 +20,11 @@ The figure below showcases the deployed SaaS architecture utilized throughout th
 
 ### Key Components of the System
 
-- **Data Lake Server ([simutool/kgservice](https://github.com/simutool/kgservice), [simutool/model-builder](https://github.com/simutool/model-builder), [simutool/dm-reader](https://github.com/simutool/dm-reader), and others)**: This component manages data lake entries, including metadata, storage, and data discovery. It establishes a semantic data model layer atop a property graph store.
+- **Data Lake Server**: This component manages data lake entries, including metadata, storage, and data discovery. It establishes a semantic data model layer atop a property graph store.
 
-- **Data Visualization Client ([simutool/om-tool](https://github.com/simutool/om-tool))**: An application designed for visualizing manufacturing sensor data, facilitating comparisons with reference data, and uploading data assets and their metadata to the KGService.
+- **Data Visualization Client**: An application designed for visualizing manufacturing sensor data, facilitating comparisons with reference data, and uploading data assets and their metadata to the KGService.
 
-- **Native OS Client ([simutool/aku-client](https://github.com/simutool/aku-client))**: This end-user application aids users in adding and uploading data assets and their metadata to the Data Lake Server.
+- **Native OS Client**: This end-user application aids users in adding and uploading data assets and their metadata to the Data Lake Server.
 
 
 ## Scaling the Architecture
